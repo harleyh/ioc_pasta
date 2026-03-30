@@ -11,6 +11,7 @@ tests/node_test.js
 
 # Old/backup files
 background2.js
+background.bak.js
 popup/popup2.js
 
 # OS files
