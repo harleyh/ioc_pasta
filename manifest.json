@@ -1,0 +1,42 @@
+{
+    "manifest_version": 2,
+    "name": "IoC Pasta",
+    "author": "Harley Halsey",
+    "version": "0.2",
+    "description": "This extension supports extracting file hashes (MD5, SHA1, and SHA256), IPv4 and IPv6 addresses, domains, and URLS from web pages. It allows you to easily copy/paste or upload to an OpenCTI instance.",
+    "icons": {
+        "48": "icons/icon_48x48.png",
+        "96": "icons/icon_96x96.png"
+    },
+    "background": {
+        "scripts" : ["utils/load_psl.js","utils/ioc-patterns.js","background.js"],
+        "persistent": true
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js": ["utils/ioc-patterns.js","content/content-script.js"],
+            "run_at": "document_idle"
+        }
+    ],
+    "options_ui": {
+        "page": "options.html"
+        
+    },
+    "browser_action": {
+        "default_icon": "icons/icon_48x48.png",
+        "default_title": "IoC Pasta",
+        "default_popup": "popup/popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "contextMenus",
+        "clipboardWrite",
+        "tabs",
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        "data/public_suffix_list.dat"
+    ]
+}

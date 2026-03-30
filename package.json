@@ -1,0 +1,7 @@
+{
+    "name": "ioc-pasta",
+    "version": "0.2",
+    "scripts": {
+        "build": "zip -r ioc-pasta.xpi . -x '*.git*' -x 'tests/*' -x 'node_modules/*' -x 'package.json' -x '*.md' -x 'background2.js' -x 'popup/popup2.js'"
+    }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOC Extraction Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .ioc {
+            font-family: monospace;
+            background-color: #eee;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        .mixed-content {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>IOC Extraction Test Page</h1>
+    <p>This page contains various mock Indicators of Compromise (IOCs) to test extraction tools and extensions.</p>
+
+    <div class="section">
+        <h2>IPv4 Addresses</h2>
+        <p>Here are some sample IPv4 addresses:</p>
+        <ul>
+            <li><span class="ioc">192.168.1.1</span> - Common local router address</li>
+            <li><span class="ioc">10.0.0.1</span> - Private network address</li>
+            <li><span class="ioc">8.8.8.8</span> - Google DNS</li>
+            <li><span class="ioc">203.0.113.42</span> - Example/Documentation address</li>
+            <li><span class="ioc">98.137.11.164</span> - Random public address</li>
+            <li><span class="ioc">185.199.108.153</span> - Mock malicious address</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>IPv6 Addresses</h2>
+        <p>Here are some sample IPv6 addresses:</p>
+        <ul>
+            <li><span class="ioc">2001:0db8:85a3:0000:0000:8a2e:0370:7334</span> - Documentation example</li>
+            <li><span class="ioc">2001:4860:4860::8888</span> - Google DNS IPv6</li>
+            <li><span class="ioc">fe80::1ff:fe23:4567:890a</span> - Link-local address</li>
+            <li><span class="ioc">2600:1700:b030:9f30::2</span> - Mock malicious IPv6</li>
+            <li><span class="ioc">2a03:2880:f003:c07:face:b00c::2</span> - Social media related</li>
+            <li><span class="ioc">2001:0db8::ff00:42:8329</span> - Another documentation example</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Domain Names</h2>
+        <p>Here are some sample domain names:</p>
+        <ul>
+            <li><span class="ioc">example.com</span> - Standard example domain</li>
+            <li><span class="ioc">malware-delivery.net</span> - Mock malicious domain</li>
+            <li><span class="ioc">phishing-site.org</span> - Mock phishing domain</li>
+            <li><span class="ioc">command-control.cc</span> - Mock C2 domain</li>
+            <li><span class="ioc">suspicious-downloads.info</span> - Mock suspicious domain</li>
+            <li><span class="ioc">definitely-not-malware.xyz</span> - Mock malicious domain</li>
+            <li><span class="ioc">cdn.fakeupdates.net</span> - Mock malicious domain</li>
+            <li><span class="ioc">xn--lgbbat1ad8j.xn--lgbbat1ad8j</span> - Puny code domain</li>
+            <li><span class="ioc">xn--fiqs8s.cn</span> - Puny code domain</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>URLs</h2>
+        <p>Here are some sample URLs:</p>
+        <ul>
+            <li><span class="ioc">https://example.com/login.php</span> - Normal URL</li>
+            <li><span class="ioc">http://malware-delivery.net/payload.exe</span> - Mock malicious executable URL</li>
+            <li><span class="ioc">https://phishing-site.org/banking/secure-login.html</span> - Mock phishing URL</li>
+            <li><span class="ioc">http://command-control.cc/beacon?id=ABC123</span> - Mock C2 URL</li>
+            <li><span class="ioc">https://suspicious-downloads.info/free-software.zip</span> - Mock suspicious download</li>
+            <li><span class="ioc">http://definitely-not-malware.xyz/update.js</span> - Mock malicious script URL</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>MD5 Hashes</h2>
+        <p>Here are some sample MD5 hashes:</p>
+        <ul>
+            <li><span class="ioc">d41d8cd98f00b204e9800998ecf8427e</span> - Hash of empty file</li>
+            <li><span class="ioc">e10adc3949ba59abbe56e057f20f883e</span> - Mock malicious file hash</li>
+            <li><span class="ioc">5eb63bbbe01eeed093cb22bb8f5acdc3</span> - Hash of "hello world"</li>
+            <li><span class="ioc">098f6bcd4621d373cade4e832627b4f6</span> - Hash of "test"</li>
+            <li><span class="ioc">b25319faaaea0bf397b2bed872b78c45</span> - Mock ransomware hash</li>
+            <li><span class="ioc">f5c8d0fc317de12e1ddf0defc05f8246</span> - Another mock malicious hash</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>SHA1 Hashes</h2>
+        <p>Here are some sample SHA1 hashes:</p>
+        <ul>
+            <li><span class="ioc">da39a3ee5e6b4b0d3255bfef95601890afd80709</span> - Hash of empty file</li>
+            <li><span class="ioc">aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d</span> - Hash of "hello"</li>
+            <li><span class="ioc">2aae6c35c94fcfb415dbe95f408b9ce91ee846ed</span> - Hash of "test"</li>
+            <li><span class="ioc">5baa61e4c9b93f3f0682250b6cf8331b7ee68fd8</span> - Hash of "password"</li>
+            <li><span class="ioc">e6fb06210fafc02fd7479ddbed2d042cc3a5155e</span> - Mock malicious file hash</li>
+            <li><span class="ioc">a3da18f9b5e63a5e9afe713f9e5611e97c3f1997</span> - Mock trojan hash</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>SHA256 Hashes</h2>
+        <p>Here are some sample SHA256 hashes:</p>
+        <ul>
+            <li><span class="ioc">e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855</span> - Hash of empty file</li>
+            <li><span class="ioc">9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08</span> - Hash of "test"</li>
+            <li><span class="ioc">5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5</span> - Hash of "12345"</li>
+            <li><span class="ioc">a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e</span> - Hash of "Hello World"</li>
+            <li><span class="ioc">6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b</span> - Hash of "1"</li>
+            <li><span class="ioc">181201bcb4f5982a1a3fc80a9cef96a6446c7d3ecd9ed9132d6531cb8092cfde</span> - Mock malicious file hash</li>
+        </ul>
+    </div>
+
+    <div class="mixed-content">
+        <h2>Mixed Content for Testing</h2>
+        <p>This section contains a mix of different IOCs in paragraph form to test extraction from unstructured text:</p>
+        
+        <p>During our investigation, we found connections to suspicious IP <span class="ioc">45.88.21.133</span> and IPv6 address <span class="ioc">2620:119:35::133</span>. The malware appeared to come from <span class="ioc">malicious-payload-server.com</span> specifically from the URL <span class="ioc">https://malicious-payload-server.com/download/inject.js</span>. The file had an MD5 hash of <span class="ioc">b4114cab9e95d471aaf96c482f9a0689</span>, SHA1 hash <span class="ioc">e0c0188d5eb7131a6a27654bde639a9563cb8a35</span>, and SHA256 hash <span class="ioc">8b15c5e95fbc44aec75a3a3b15bd485f3a96500711eb14441f9b2a88d4bb19a7</span>.</p>
+
+        <p>Additional IOCs include communications with <span class="ioc">10.72.19.5</span>, attempts to resolve <span class="ioc">exfiltration.example.org</span>, and downloads from <span class="ioc">http://cdn.fakeupdates.net/flash/update.exe</span> with hash <span class="ioc">d179aef435f7edba6f494d7849d6c4c2</span>.</p>
+    </div>
+
+    <div class="section">
+        <h2>IOC Data Table</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Value</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>IPv4</td>
+                <td><span class="ioc">104.18.21.52</span></td>
+                <td>Mock C2 server</td>
+            </tr>
+            <tr>
+                <td>Domain</td>
+                <td><span class="ioc">evil-malware-host.net</span></td>
+                <td>Mock distribution site</td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><span class="ioc">https://evil-malware-host.net/pay/ransomware.bin</span></td>
+                <td>Mock ransomware URL</td>
+            </tr>
+            <tr>
+                <td>IPv6</td>
+                <td><span class="ioc">2001:db8:85a3::8a2e:370:7334</span></td>
+                <td>Mock attacker infrastructure</td>
+            </tr>
+            <tr>
+                <td>MD5</td>
+                <td><span class="ioc">7688499dcfa94bfe3ba71f592886a58a</span></td>
+                <td>Mock malicious document</td>
+            </tr>
+            <tr>
+                <td>SHA1</td>
+                <td><span class="ioc">36c5db017c181f9853f084d4367bfd8ff7c7a8c9</span></td>
+                <td>Mock malicious DLL</td>
+            </tr>
+            <tr>
+                <td>SHA256</td>
+                <td><span class="ioc">a591a6d40bf420404a011733cfb7b190d62c65bf0bcda32b57b277d9ad9f146e</span></td>
+                <td>Mock keylogger</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        <p>This is a mock page containing fictional IOCs for testing purposes only.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!-- popup/popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IOC Pasta</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <header>
+      <h1>IOC Pasta</h1>
+
+      <div class="actions">
+        <button id="refresh-btn" title="Refresh scan"><img src="../icons/refresh.png" alt="Refresh"></button>
+        <button id="settings-btn" title="Settings"><img src="../icons/settings.png" alt="Settings"></button>
+      </div>
+    </header>
+    
+    <div class="filters">
+      <div class="filter-controls">
+        <label>
+          <span>Filter by type:</span>
+          <select id="type-filter">
+            <option value="all">All Types</option>
+            <option value="md5">MD5 Hashes</option>
+            <option value="sha1">SHA-1 Hashes</option>
+            <option value="sha256">SHA-256 Hashes</option>
+            <option value="ipv4">IPv4 Addresses</option>
+            <option value="domain">Domains</option>
+            <option value="url">URLs</option>
+            <option value="email">Email Addresses</option>
+            <option value="cve">CVE IDs</option>
+          </select>
+        </label>
+      </div>
+      
+      <div class="global-actions">
+        <button id="copy-all-btn">Copy All</button>
+        <button id="send-all-btn">Send All to OpenCTI</button>
+      </div>
+    </div>
+    
+    <div id="opencti-status" class="opencti-status hidden">
+      <div class="status-message">OpenCTI connection not configured</div>
+      <a href="#" id="configure-opencti">Configure Now</a>
+    </div>
+    
+    <div id="loading" class="loading-container">
+      <div class="spinner"></div>
+      <p>Loading indicators...</p>
+    </div>
+    
+    <div id="no-iocs" class="empty-state hidden">
+      <p>No indicators found on this page.</p>
+      <button id="scan-page-btn">Scan Page</button>
+    </div>
+    
+    <div id="ioc-container" class="ioc-container hidden">
+      <!-- IOC sections will be added here dynamically -->
+    </div>
+    
+    <div id="copy-feedback" class="copy-feedback hidden">
+      Copied!
+    </div>
+  </div>
+  
+  <template id="ioc-section-template">
+    <div class="ioc-section">
+      <div class="section-header">
+        <h2 class="section-title"><!-- IOC Type Name --></h2>
+        <span class="count-badge"><!-- Count --></span>
+      </div>
+      <div class="section-actions">
+        <button class="copy-section">Copy All</button>
+        <button class="send-section">Send to OpenCTI</button>
+      </div>
+      <ul class="ioc-list">
+        <!-- IOC items will be added here dynamically -->
+      </ul>
+    </div>
+  </template>
+  
+  <template id="ioc-item-template">
+    <li class="ioc-item">
+      <div class="ioc-value"><!-- IOC Value --></div>
+      <div class="item-actions">
+        <button class="copy-btn" title="Copy"><img src="../icons/copy.png" alt="Copy"></button>
+        <button class="send-btn" title="Send to OpenCTI"><img src="../icons/send.png" alt="Send"></button>
+      </div>
+    </li>
+  </template>
+  
+  <script src="popup.js" type="module"></script>
+</body>
+</html>
